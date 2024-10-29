@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { timer } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,8 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular-csr-api';
+
+  ngOnInit() {
+    timer(0, 1000).subscribe(console.log)
+  }
 }
